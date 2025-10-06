@@ -1,4 +1,5 @@
 import {Dollar} from "../src/dollar.js";
+import {Franc} from "../src/franc";
 
 describe('money', () => {
 
