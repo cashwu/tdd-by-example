@@ -10,6 +10,9 @@ export class Dollar {
     }
 
     equals(another) {
-        return true;
+        if (another instanceof Dollar) {
+            return this.amount === another.amount;
+        }
+        return false;
     }
 }
