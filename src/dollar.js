@@ -11,7 +11,7 @@ export class Dollar extends Money {
     }
 
     equals(another) {
-        if (another instanceof Dollar) {
+        if (another instanceof Money) {
             return this._amount === another._amount;
         }
         return false;
