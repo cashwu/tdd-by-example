@@ -9,11 +9,4 @@ export class Dollar extends Money {
     times(multiplier) {
         return new Dollar(this._amount * multiplier)
     }
-
-    equals(another) {
-        if (another instanceof Money) {
-            return this._amount === another._amount;
-        }
-        return false;
-    }
 }
