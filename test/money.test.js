@@ -13,14 +13,12 @@ describe('money', () => {
     })
 
 
-
     it('test equality', () => {
+        expect(new Dollar(5).equals(new Dollar(5)))
+            .toBe(true);
 
-        let dollar = new Dollar(5);
-        let another = new Dollar(5);
-        expect(dollar.equals(another)).toBe(true);
-
-
+        expect(new Dollar(5).equals(new Dollar(6)))
+            .toBe(false);
     })
 
 
