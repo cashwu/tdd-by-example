@@ -9,11 +9,4 @@ export class Franc extends Money {
     times(multiplier) {
         return new Franc(this._amount * multiplier)
     }
-
-    equals(another) {
-        if (another instanceof Franc) {
-            return this._amount === another._amount;
-        }
-        return false;
-    }
 }
