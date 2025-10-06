@@ -1,20 +1,18 @@
 import {Money} from "./money";
 
 export class Franc extends Money {
-    #amount;
 
     constructor(amount) {
         super(amount);
-        this.#amount = amount
     }
 
     times(multiplier) {
-        return new Franc(this.#amount * multiplier)
+        return new Franc(this._amount * multiplier)
     }
 
     equals(another) {
         if (another instanceof Franc) {
-            return this.#amount === another.#amount;
+            return this._amount === another._amount;
         }
         return false;
     }
