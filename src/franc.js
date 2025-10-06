@@ -1,7 +1,10 @@
-export class Franc {
+import {Money} from "./money";
+
+export class Franc extends Money {
     #amount;
 
     constructor(amount) {
+        super(amount);
         this.#amount = amount
     }
 
