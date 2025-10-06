@@ -1,3 +1,5 @@
+import {Dollar} from "../src/dollar.js";
+
 describe('money', () => {
 
     it('test multiplication', () => {
