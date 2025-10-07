@@ -2,6 +2,8 @@ export class Money {
 
     _amount;
 
+    _currency;
+
     constructor(amount) {
         this._amount = amount;
     }
@@ -12,5 +14,9 @@ export class Money {
                 && this.constructor.name === another.constructor.name;
         }
         return false;
+    }
+
+    currency() {
+        return this._currency;
     }
 }
