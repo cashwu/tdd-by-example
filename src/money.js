@@ -12,7 +12,7 @@ export class Money {
     equals(another) {
         if (another instanceof Money) {
             return this._amount === another._amount
-                && this.constructor.name === another.constructor.name;
+                && this.currency() === another.currency();
         }
         return false;
     }
