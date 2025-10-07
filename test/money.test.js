@@ -1,4 +1,5 @@
 import {Money} from "../src/money";
+import {Bank} from "./bank";
 
 describe('money', () => {
 
