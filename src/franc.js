@@ -7,7 +7,7 @@ export class Franc extends Money {
     }
 
     times(multiplier) {
-        return new Franc(this._amount * multiplier, "CHF");
+        return new Franc(this._amount * multiplier, this._currency);
     }
 }
 
