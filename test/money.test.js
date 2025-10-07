@@ -7,15 +7,15 @@ describe('money', () => {
     it('test multiplication', () => {
 
         let dollar = Money.dollar(5)
-        expect(dollar.times(2)).toEqual(new Dollar(10));
-        expect(dollar.times(3)).toEqual(new Dollar(15));
+        expect(dollar.times(2)).toEqual(Money.dollar(10));
+        expect(dollar.times(3)).toEqual(Money.dollar(15));
     })
 
     it('test equality', () => {
-        expect(new Dollar(5).equals(new Dollar(5)))
+        expect(Money.dollar(5).equals(Money.dollar(5)))
             .toBe(true);
 
-        expect(new Dollar(5).equals(new Dollar(6)))
+        expect(Money.dollar(5).equals(Money.dollar(6)))
             .toBe(false);
 
         expect(new Franc(5).equals(new Franc(5)))
@@ -24,7 +24,7 @@ describe('money', () => {
         expect(new Franc(5).equals(new Franc(6)))
             .toBe(false);
 
-        expect(new Franc(5).equals(new Dollar(5)))
+        expect(new Franc(5).equals(Money.dollar(5)))
             .toBe(false);
     })
 
