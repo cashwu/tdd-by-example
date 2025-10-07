@@ -10,3 +10,8 @@ export class Dollar extends Money {
         return new Dollar(this._amount * multiplier)
     }
 }
+
+Money.dollar = function (amount) {
+    return new Dollar(amount);
+}
+

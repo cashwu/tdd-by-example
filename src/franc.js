@@ -1,4 +1,5 @@
 import {Money} from "./money";
+import {Dollar} from "./dollar";
 
 export class Franc extends Money {
 
@@ -10,3 +11,8 @@ export class Franc extends Money {
         return new Franc(this._amount * multiplier)
     }
 }
+
+Money.franc = function(amount) {
+    return new Franc(amount);
+}
+
