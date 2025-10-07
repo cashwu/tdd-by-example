@@ -8,6 +8,6 @@ export class Franc extends Money {
 }
 
 Money.franc = function (amount) {
-    return new Franc(amount, "CHF");
+    return new Money(amount, "CHF");
 }
 

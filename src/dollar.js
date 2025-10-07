@@ -8,6 +8,6 @@ export class Dollar extends Money {
 }
 
 Money.dollar = function (amount) {
-    return new Dollar(amount, "USD");
+    return new Money(amount, "USD");
 }
 
