@@ -2,7 +2,7 @@ import {Money} from "./money";
 
 export class Franc extends Money {
 
-    constructor(amount) {
+    constructor(amount, currency) {
         super(amount);
         this._currency = "CHF";
     }
