@@ -35,7 +35,10 @@ describe('money', () => {
 
     it('test simple addition', () => {
         let sum = Money.dollar(5).plus(Money.dollar(5));
-        expect(sum).toEqual(Money.dollar(10));
+
+        let bank = new Bank();
+        let reduce = bank.reduce(sum, "USD");
+        expect(reduce).toEqual(Money.dollar(10));
     })
 
 
