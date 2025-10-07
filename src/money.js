@@ -17,6 +17,10 @@ export class Money {
         return new Money(amount, "CHF");
     }
 
+    plus(addend) {
+        return new Money(this._amount + addend._amount, this._currency);
+    }
+
 
     equals(another) {
         if (another instanceof Money) {
