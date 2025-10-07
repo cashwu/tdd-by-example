@@ -1,5 +1,4 @@
 import {Money} from "../src/money";
-import "../src/dollar"
 import "../src/franc"
 import {Franc} from "../src/franc";
 

@@ -9,6 +9,10 @@ export class Money {
         this._currency = currency;
     }
 
+    static dollar(amount) {
+        return new Money(amount, "USD");
+    }
+
     equals(another) {
         if (another instanceof Money) {
             return this._amount === another._amount
