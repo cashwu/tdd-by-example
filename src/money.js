@@ -13,6 +13,11 @@ export class Money {
         return new Money(amount, "USD");
     }
 
+    static franc(amount) {
+        return new Money(amount, "CHF");
+    }
+
+
     equals(another) {
         if (another instanceof Money) {
             return this._amount === another._amount

@@ -1,6 +1,4 @@
 import {Money} from "../src/money";
-import "../src/franc"
-import {Franc} from "../src/franc";
 
 describe('money', () => {
 
@@ -33,11 +31,5 @@ describe('money', () => {
         expect(Money.dollar(1).currency()).toEqual("USD");
         expect(Money.franc(1).currency()).toEqual("CHF");
     })
-
-
-    it('test different class equality', () => {
-        expect(new Money(10, "CHE")).toEqual(new Franc(10, "CHE"));
-    })
-
 
 });
