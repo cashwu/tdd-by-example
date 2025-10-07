@@ -2,17 +2,17 @@ import {Money} from "./money";
 
 export class Dollar extends Money {
 
-    constructor(amount) {
+    constructor(amount, currency) {
         super(amount);
-        this._currency = "USD";
+        this._currency = currency;
     }
 
     times(multiplier) {
-        return new Dollar(this._amount * multiplier)
+        return Money.dollar(this._amount * multiplier)
     }
 }
 
 Money.dollar = function (amount) {
-    return new Dollar(amount);
+    return new Dollar(amount, "USD");
 }
 
