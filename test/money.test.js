@@ -35,4 +35,10 @@ describe('money', () => {
     })
 
 
+    it('test currency', () => {
+        expect(Money.dollar(1).currency()).toEqual("USD");
+        expect(Money.franc(1).currency()).toEqual("CHF");
+    })
+
+
 });
