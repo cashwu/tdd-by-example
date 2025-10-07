@@ -8,11 +8,11 @@ export class Franc extends Money {
     }
 
     times(multiplier) {
-        return new Franc(this._amount * multiplier)
+        return new Franc(this._amount * multiplier, null)
     }
 }
 
 Money.franc = function (amount) {
-    return new Franc(amount);
+    return new Franc(amount, null);
 }
 
