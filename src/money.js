@@ -20,4 +20,8 @@ export class Money {
     currency() {
         return this._currency;
     }
+
+    times(multiplier) {
+        return new Money(this._amount * multiplier, this._currency);
+    }
 }
