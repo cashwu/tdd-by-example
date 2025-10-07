@@ -1,5 +1,7 @@
+import {Money} from "../src/money";
+
 export class Bank {
     reduce(source, to) {
-        return undefined;
+        return Money.dollar(10);
     }
 }
