@@ -1,11 +1,12 @@
 import {Dollar} from "../src/dollar.js";
 import {Franc} from "../src/franc";
+import {Money} from "../src/money";
 
 describe('money', () => {
 
     it('test multiplication', () => {
 
-        let dollar = new Dollar(5);
+        let dollar = Money.dollar(5)
         expect(dollar.times(2)).toEqual(new Dollar(10));
         expect(dollar.times(3)).toEqual(new Dollar(15));
     })
