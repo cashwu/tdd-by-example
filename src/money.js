@@ -4,8 +4,9 @@ export class Money {
 
     _currency;
 
-    constructor(amount) {
+    constructor(amount, currency) {
         this._amount = amount;
+        this._currency = currency;
     }
 
     equals(another) {

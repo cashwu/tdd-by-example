@@ -3,8 +3,7 @@ import {Money} from "./money";
 export class Dollar extends Money {
 
     constructor(amount, currency) {
-        super(amount);
-        this._currency = currency;
+        super(amount, currency);
     }
 
     times(multiplier) {
