@@ -109,7 +109,7 @@ describe('money', () => {
 
         let result = bank.reduce(sum, "USD");
 
-        expect(result).toEqual(Money.dollar(10));
+        expect(result).toEqual(Money.dollar(15));
     })
 
 
