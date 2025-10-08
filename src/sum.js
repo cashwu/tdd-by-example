@@ -1,4 +1,10 @@
 export class Sum {
+
+    augend;
     addend;
-    addend;
+
+    constructor(augend, addend) {
+        this.augend = augend;
+        this.addend = addend;
+    }
 }
