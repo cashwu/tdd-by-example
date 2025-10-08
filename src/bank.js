@@ -11,3 +11,13 @@ export class Bank {
 
     }
 }
+
+class Pair {
+    from
+    to
+
+    constructor(from, to) {
+        this.from = from;
+        this.to = to;
+    }
+}
