@@ -20,4 +20,14 @@ class Pair {
         this.from = from;
         this.to = to;
     }
+
+    equals(another) {
+        if (another instanceof Pair) {
+            return this.from === another.from && this.to === another.to;
+        }
+    }
+
+    hashCode() {
+        return 0;
+    }
 }
