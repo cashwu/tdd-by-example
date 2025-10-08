@@ -2,13 +2,18 @@ export class Bank {
     rates = new Map();
 
     reduce(source, to) {
+        console.log("reduce", source, to);
         return source.reduce(this, to);
     }
 
     rate(from, to) {
+
+        if (from === to) {
+            return 1;
+        }
+
         let key = from + "->" + to;
-        let rate = this.rates.get(key);
-        return rate.value;
+        return this.rates.get(key);
     }
 
     addRate(from, to, rate) {
