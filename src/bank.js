@@ -2,7 +2,6 @@ export class Bank {
     rates = new Map();
 
     reduce(source, to) {
-        console.log("reduce", source, to);
         return source.reduce(this, to);
     }
 
