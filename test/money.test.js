@@ -62,4 +62,11 @@ describe('money', () => {
     })
 
 
+    it('test reduce money', () => {
+
+        let result = new Bank().reduce(Money.dollar(1), "USD");
+        expect(result).toEqual(Money.dollar(1));
+    })
+
+
 });
