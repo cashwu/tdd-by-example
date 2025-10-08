@@ -1,5 +1,6 @@
 import {Money} from "../src/money";
 import {Bank} from "../src/bank";
+import {Sum} from "../src/sum";
 
 describe('money', () => {
 
@@ -46,6 +47,7 @@ describe('money', () => {
 
     it('test plus return sum', () => {
 
+        new Sum()
         let five = Money.dollar(5);
         let sum = five.plus(five);
         expect(sum.augend).toEqual(five);
