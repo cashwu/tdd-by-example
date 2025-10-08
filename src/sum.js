@@ -10,7 +10,7 @@ export class Sum {
         this.addend = addend;
     }
 
-    reduce(to) {
+    reduce(bank, to) {
         let amount = this.augend._amount + this.addend._amount;
         return Money.dollar(amount, to);
     }
