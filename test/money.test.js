@@ -78,6 +78,10 @@ describe('money', () => {
     })
 
 
+    it('test identity rate', () => {
+
+        expect(new Bank().rate("USD", "USD")).toEqual(1);
+    })
 
 
 });
