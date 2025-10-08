@@ -47,11 +47,18 @@ describe('money', () => {
 
     it('test plus return sum', () => {
 
-        new Sum()
         let five = Money.dollar(5);
         let sum = five.plus(five);
         expect(sum.augend).toEqual(five);
         expect(sum.augend).toEqual(five);
+    })
+
+
+    it('test reduce sum', () => {
+
+        let sum = new Sum(Money.dollar(3), Money.dollar(4));
+        let result = new Bank().reduce(sum, "USD");
+        expect(result).toEqual(new Money(7));
     })
 
 
