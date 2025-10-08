@@ -1,4 +1,4 @@
-import {Money} from "../src/money";
+import {Money} from "./money";
 
 export class Bank {
     reduce(source, to) {
