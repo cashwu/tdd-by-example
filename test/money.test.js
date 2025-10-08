@@ -69,4 +69,13 @@ describe('money', () => {
     })
 
 
+    it('test reduce money different currency', () => {
+
+        let bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        let result = bank.reduce(Money.franc(2), "USD");
+        expect(result).toEqual(Money.dollar(1));
+    })
+
+
 });
