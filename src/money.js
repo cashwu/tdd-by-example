@@ -1,3 +1,5 @@
+import {Sum} from "./sum";
+
 export class Money {
 
     _amount;
@@ -18,7 +20,9 @@ export class Money {
     }
 
     plus(addend) {
-        return new Money(this._amount + addend._amount, this._currency);
+        return new Sum(this, addend);
+
+        // return new Money(this._amount + addend._amount, this._currency);
     }
 
 
