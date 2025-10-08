@@ -1,14 +1,19 @@
 export class Bank {
+    rates = new Map();
+
     reduce(source, to) {
         return source.reduce(this, to);
     }
 
     rate(from, to) {
-        return from === "CHF" && to === "USD" ? 2 : 1;
+        let key = from + "->" + to;
+        let rate = this.rates.get(key);
+        return rate.value;
     }
 
-    addRate(source, to, rate) {
-
+    addRate(from, to, rate) {
+        let key = from + "->" + to;
+        this.rates.set(key, rate);
     }
 }
 
