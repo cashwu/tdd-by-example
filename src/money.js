@@ -39,7 +39,8 @@ export class Money {
         return new Money(this._amount * multiplier, this._currency);
     }
 
-    reduce(to) {
-        return this;
+    reduce(bank, to) {
+        let rate = bank.rate(this._currency, to);
+        return new Money(this._amount / rate, to);
     }
 }
