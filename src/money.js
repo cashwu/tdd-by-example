@@ -23,7 +23,6 @@ export class Money {
         return new Sum(this, addend);
     }
 
-
     equals(another) {
         if (another instanceof Money) {
             return this._amount === another._amount
@@ -38,5 +37,9 @@ export class Money {
 
     times(multiplier) {
         return new Money(this._amount * multiplier, this._currency);
+    }
+
+    reduce(to) {
+        return this;
     }
 }

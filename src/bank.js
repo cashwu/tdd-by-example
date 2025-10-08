@@ -5,7 +5,7 @@ export class Bank {
     reduce(source, to) {
 
         if (source instanceof Money) {
-            return source;
+            return source.reduce(to);
         }
 
         if (source instanceof Sum) {
