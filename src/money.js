@@ -21,8 +21,6 @@ export class Money {
 
     plus(addend) {
         return new Sum(this, addend);
-
-        // return new Money(this._amount + addend._amount, this._currency);
     }
 
 
