@@ -84,4 +84,17 @@ describe('money', () => {
     })
 
 
+    it('test mixed addition', () => {
+
+        let fiveBucks = Money.dollar(5);
+        let tenFrancs = Money.franc(10);
+
+        let bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        let result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+
+        expect(result).toEqual(Money.dollar(10));
+    })
+
+
 });
