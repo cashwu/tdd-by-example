@@ -97,4 +97,20 @@ describe('money', () => {
     })
 
 
+    it('test sum plus money', () => {
+
+        let fiveBucks = Money.dollar(5);
+        let tenFrancs = Money.franc(10);
+
+        let bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+
+        let sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+
+        let result = bank.reduce(sum, "USD");
+
+        expect(result).toEqual(Money.dollar(10));
+    })
+
+
 });
