@@ -15,4 +15,8 @@ export class Sum {
             + this.addend.reduce(bank, to)._amount;
         return Money.dollar(amount, to);
     }
+
+    plus(addend) {
+        return new Sum(this, addend);
+    }
 }
